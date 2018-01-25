@@ -12,6 +12,7 @@ var TMM_DB_MIGRATE = function() {
 					if(confirm(tmm_migrate_l10n.import_caution)){ /* ボタン押下時のアラート。index.phpでメッセージ定義 */
 						jQuery(this).attr('data-active', true); /* 属性値変更 */
 						self.import( jQuery(this) ); /* import起動 */
+						/* おそらくこのへんで止まってる　.htaccessでadmin-ajax.phpをactivateが必要かも。CSRF対策でサーバー側が禁じてるかも */
 					}
 				}
 
