@@ -44,7 +44,7 @@ function tmm_migrate_admin_enqueue_scripts() {
 	);
 
 	wp_enqueue_script('tmm_db_migrate', TMM_MIGRATE_URL . 'js/import_export.js', array('jquery'), false, true);
-	wp_localize_script('tmm_db_migrate', 'tmm_migrate_l10n', $tmm_lang); /* PHP の連想配列を JS のオブジェクトとして扱える */
+	wp_localize_script('tmm_db_migrate', 'tmm_migrate_l10n', $tmm_lang); /* PHP の連想配列を JS でtmm_migrate_l10nオブジェクトとして扱える */
 }
 
 add_action( 'admin_init', 'tmm_migrate_init', 999 );
