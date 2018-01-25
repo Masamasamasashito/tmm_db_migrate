@@ -8,10 +8,10 @@ var TMM_DB_MIGRATE = function() {
 
 			jQuery('#button_prepare_import_data').click(function () {
 
-				if (jQuery(this).attr('data-active') != 'true') {
-					if(confirm(tmm_migrate_l10n.import_caution)){
-						jQuery(this).attr('data-active', true);
-						self.import( jQuery(this) );
+				if (jQuery(this).attr('data-active') != 'true') { /* 属性値確認 */
+					if(confirm(tmm_migrate_l10n.import_caution)){ /* ボタン押下時のアラート。index.phpでメッセージ定義 */
+						jQuery(this).attr('data-active', true); /* 属性値変更 */
+						self.import( jQuery(this) ); /* import起動 */
 					}
 				}
 
