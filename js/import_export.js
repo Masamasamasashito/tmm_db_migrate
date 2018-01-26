@@ -13,6 +13,7 @@ var TMM_DB_MIGRATE = function() {
 						jQuery(this).attr('data-active', true); /* 属性値変更 */
 						self.import( jQuery(this) ); /* import起動 */
 						/* おそらくこの前後で止まってる　.htaccessでadmin-ajax.phpをactivateが必要？CSRF対策でサーバー側が禁じてる？ */
+						/* TMM_MigrateImport も見た方がいい */
 					}
 				}
 
